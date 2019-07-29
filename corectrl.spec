@@ -67,3 +67,15 @@ See How profiles works for more info on this topic.
 %prep
 %autosetup -p1
 
+%build
+%cmake -G Ninja \
+    -DBUILD_TESTING=OFF
+    -DCMAKE_BUILD_TYPE=Release \
+    
+%ninja_build -C
+
+%install
+%ninja_install -C
+
+%files
+#!
