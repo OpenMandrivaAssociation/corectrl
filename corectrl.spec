@@ -69,8 +69,8 @@ See How profiles works for more info on this topic.
 
 %build
 %cmake -G Ninja \
-    -DBUILD_TESTING=OFF
-    -DCMAKE_BUILD_TYPE=Release \
+    -DBUILD_TESTING=OFF \
+    -DCMAKE_BUILD_TYPE=Release
     
 %ninja_build -C
 
