@@ -65,7 +65,7 @@ or define a global behavior for a part while controlling other parts with custom
 See How profiles works for more info on this topic.
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n %{name}-v%{version}
 
 %build
 %cmake -G Ninja \
