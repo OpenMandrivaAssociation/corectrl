@@ -20,15 +20,15 @@ BuildRequires:  cmake(Qt5Widgets)
 BuildRequires:  cmake(Qt5Multimedia)
 BuildRequires:  cmake(Qt5Network)
 BuildRequires:  cmake(Qt5Svg)
-
 BuildRequires:  cmake(Qt5Qml)
 BuildRequires:  cmake(Qt5QuickControls2)
 BuildRequires:  cmake(Qt5QuickTemplates2)
-
 BuildRequires:  cmake(Qt5LinguistTools)
-
 BuildRequires:  cmake(KF5Auth)
 BuildRequires:  cmake(KF5Archive)
 BuildRequires:  cmake(KF5CoreAddons)
-
+BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  pkgconfig(botan-2)
+BuildRequires:  pkgconfig(x11)
+
+BuildRequires:  desktop-file-utils
