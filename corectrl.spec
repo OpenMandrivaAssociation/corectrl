@@ -10,10 +10,25 @@ Source0:        https://gitlab.com/corectrl/corectrl/-/archive/v%{version}/%{nam
 
 #Qt stack
 BuildRequires:  cmake
-cmake(Qt5Core)
-cmake(Qt5DBus)
-cmake(Qt5Charts)
-cmake(Qt5Widgets)
-cmake(Qt5Network)
+BuildRequires:  ninja
+BuildRequires:  cmake(ECM)
+BuildRequires:  cmake(Qt5Core)
+BuildRequires:  cmake(Qt5Concurrent)
+BuildRequires:  cmake(Qt5DBus)
+BuildRequires:  cmake(Qt5Charts)
+BuildRequires:  cmake(Qt5Widgets)
+BuildRequires:  cmake(Qt5Multimedia)
+BuildRequires:  cmake(Qt5Network)
+BuildRequires:  cmake(Qt5Svg)
 
-#Qt QML stack
+BuildRequires:  cmake(Qt5Qml)
+BuildRequires:  cmake(Qt5QuickControls2)
+BuildRequires:  cmake(Qt5QuickTemplates2)
+
+BuildRequires:  cmake(Qt5LinguistTools)
+
+BuildRequires:  cmake(KF5Auth)
+BuildRequires:  cmake(KF5Archive)
+BuildRequires:  cmake(KF5CoreAddons)
+
+BuildRequires:  pkgconfig(botan-2)
