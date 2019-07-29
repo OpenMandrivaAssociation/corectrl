@@ -72,7 +72,7 @@ See How profiles works for more info on this topic.
     -DBUILD_TESTING=OFF \
     -DCMAKE_BUILD_TYPE=Release
     
-%ninja_build -C
+%ninja -C build
 
 %install
 %ninja_install -C
