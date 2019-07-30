@@ -31,7 +31,7 @@ BuildRequires:  cmake(KF5CoreAddons)
 BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  pkgconfig(botan-2)
 BuildRequires:  pkgconfig(x11)
-
+BuildRequires:  stdc++-static-devel
 BuildRequires:  desktop-file-utils
 
 Requires:       dbus
@@ -48,7 +48,7 @@ Recommends:     glxinfo
 Recommends:     mesa-demos
 # For lscpu
 Recommends:     util-linux
-#NOT AVAILABLE IN CÓKIER yet
+#NOT AVAILABLE IN Cooker yet
 #Recommends:    vulkan-tools
 
 %description
@@ -67,12 +67,16 @@ See How profiles works for more info on this topic.
 
 %prep
 %autosetup -p1 -n %{name}-v%{version}
-%cmake -G Ninja \
-    -DBUILD_TESTING=OFF \
-    -DCMAKE_BUILD_TYPE=Release
 
 %build
-%ninja -C build
+%cmake  \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DBUILD_TESTING=OFF \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -G Ninja
+%ninja_build
+
+sed -i -- 's/\/usr/${CMAKE_INSTALL_PREFIX}/g' src/helper/cmake_install.cmake
 
 %install
 %ninja_install -C build
