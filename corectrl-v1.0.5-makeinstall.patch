@@ -1,0 +1,11 @@
+diff -up corectrl-v1.0.5/src/CMakeLists.txt.omv~ corectrl-v1.0.5/src/CMakeLists.txt
+--- corectrl-v1.0.5/src/CMakeLists.txt.omv~	2019-07-30 18:51:02.770198627 +0200
++++ corectrl-v1.0.5/src/CMakeLists.txt	2019-07-30 18:55:49.381962269 +0200
+@@ -368,6 +368,6 @@ target_link_libraries(corectrl PRIVATE
+ 
+ install(TARGETS corectrl corectrl_lib
+         RUNTIME DESTINATION bin
+-        LIBRARY DESTINATION lib)
++	LIBRARY DESTINATION ${KDE_INSTALL_LIBDIR})
+ 
+ add_subdirectory(helper)

@@ -7,6 +7,7 @@ Summary:        Hardware control tools with nice GUI for Linux
 License:        GPLv3+
 URL:            https://gitlab.com/corectrl/corectrl
 Source0:        https://gitlab.com/corectrl/corectrl/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
+Patch0:		corectrl-v1.0.5-makeinstall.patch
 
 #Qt stack
 BuildRequires:  cmake
@@ -66,16 +67,27 @@ See How profiles works for more info on this topic.
 
 %prep
 %autosetup -p1 -n %{name}-v%{version}
-
-%build
 %cmake -G Ninja \
     -DBUILD_TESTING=OFF \
     -DCMAKE_BUILD_TYPE=Release
-    
+
+%build
 %ninja -C build
 
 %install
-%ninja_install -C
+%ninja_install -C build
 
 %files
-#!
+%{_bindir}/corectrl
+%{_libdir}/libcorectrl.so
+%{_libdir}/libexec/kauth/corectrl_helper
+%{_libdir}/libexec/kauth/corectrl_helperkiller
+%{_datadir}/applications/org.corectrl.corectrl.desktop
+%{_datadir}/dbus-1/system-services/org.corectrl.helper.service
+%{_datadir}/dbus-1/system-services/org.corectrl.helperkiller.service
+%{_datadir}/dbus-1/system.d/org.corectrl.helper.conf
+%{_datadir}/dbus-1/system.d/org.corectrl.helperkiller.conf
+%{_datadir}/icons/*/*/apps/corectrl.*
+%{_datadir}/metainfo/org.corectrl.corectrl.appdata.xml
+%{_datadir}/polkit-1/actions/org.corectrl.helper.policy
+%{_datadir}/polkit-1/actions/org.corectrl.helperkiller.policy
