@@ -1,7 +1,7 @@
 
 
 Name:           corectrl
-Version:        1.0.5
+Version:        1.0.6
 Release:        1
 Summary:        Hardware control tools with nice GUI for Linux
 License:        GPLv3+
@@ -33,6 +33,10 @@ BuildRequires:  pkgconfig(botan-2)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  stdc++-static-devel
 BuildRequires:  desktop-file-utils
+
+%ifarch %{ix86}
+BuildRequires:  atomic-devel
+%endif
 
 Requires:       dbus
 Requires:       hicolor-icon-theme
@@ -69,6 +73,15 @@ See How profiles works for more info on this topic.
 %autosetup -p1 -n %{name}-v%{version}
 
 %build
+
+# Build on i686 with lld linker gives error "has non-ABS relocation R_386_GOTOFF against symbol '.LC12'"
+# So for i686 we switch to gold linker and to GCC (angry)
+%ifarch %{ix86}
+export CC=gcc
+export CXX=g++
+%global ldflags %{ldflags} -fuse-ld=gold
+%endif
+
 %cmake  \
       -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_TESTING=OFF \
