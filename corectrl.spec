@@ -75,7 +75,7 @@ See How profiles works for more info on this topic.
 %build
 
 # Build on i686 with lld linker gives error "has non-ABS relocation R_386_GOTOFF against symbol '.LC12'"
-# So for i686 we switch to gold linker (angry)
+# So for i686 we switch to gold linker and to GCC (angry)
 %ifarch %{ix86}
 export CC=gcc
 export CXX=g++
