@@ -34,6 +34,10 @@ BuildRequires:  pkgconfig(x11)
 BuildRequires:  stdc++-static-devel
 BuildRequires:  desktop-file-utils
 
+%ifarch %{ix86}
+BuildRequires:  atomic-devel
+%endif
+
 Requires:       dbus
 Requires:       hicolor-icon-theme
 Requires:       polkit
@@ -70,6 +74,8 @@ See How profiles works for more info on this topic.
 
 %build
 
+# Build on i686 with lld linker gives error "has non-ABS relocation R_386_GOTOFF against symbol '.LC12'"
+# So for i686 we switch to gold linker (angry)
 %ifarch %{ix86}
 %global ldflags %{ldflags} -fuse-ld=gold
 %endif
