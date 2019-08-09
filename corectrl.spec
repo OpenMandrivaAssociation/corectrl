@@ -69,6 +69,11 @@ See How profiles works for more info on this topic.
 %autosetup -p1 -n %{name}-v%{version}
 
 %build
+
+%ifarch %{ix86}
+%global ldflags %{ldflags} -fuse-ld=gold
+%endif
+
 %cmake  \
       -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_TESTING=OFF \
