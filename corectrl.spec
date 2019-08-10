@@ -103,7 +103,7 @@ sed -i -- 's/\/usr/${CMAKE_INSTALL_PREFIX}/g' src/helper/cmake_install.cmake
 %{_datadir}/dbus-1/system-services/org.corectrl.helper.service
 %{_datadir}/dbus-1/system-services/org.corectrl.helperkiller.service
 %{_datadir}/dbus-1/system.d/org.corectrl.helper.conf
-%{_datadir}/dbus-1/system.d/org.corectrl.helperkiller.conf
+#{_datadir}/dbus-1/system.d/org.corectrl.helperkiller.conf
 %{_datadir}/icons/*/*/apps/corectrl.*
 %{_datadir}/metainfo/org.corectrl.corectrl.appdata.xml
 %{_datadir}/polkit-1/actions/org.corectrl.helper.policy
