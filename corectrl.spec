@@ -1,7 +1,5 @@
-
-
 Name:           corectrl
-Version:        1.0.6
+Version:        1.0.7
 Release:        1
 Summary:        Hardware control tools with nice GUI for Linux
 License:        GPLv3+
@@ -29,6 +27,7 @@ BuildRequires:  cmake(KF5Auth)
 BuildRequires:  cmake(KF5Archive)
 BuildRequires:  cmake(KF5CoreAddons)
 BuildRequires:  pkgconfig(appstream-glib)
+BuildRequires:  pkgconfig(libdrm)
 BuildRequires:  pkgconfig(botan-2)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  stdc++-static-devel
