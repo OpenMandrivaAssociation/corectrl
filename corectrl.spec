@@ -99,8 +99,6 @@ sed -i -- 's/\/usr/${CMAKE_INSTALL_PREFIX}/g' src/helper/cmake_install.cmake
 %files
 %{_bindir}/corectrl
 %{_libdir}/libcorectrl.so
-%{_libdir}/libexec/kauth/corectrl_helper
-%{_libdir}/libexec/kauth/corectrl_helperkiller
 %{_datadir}/applications/org.corectrl.corectrl.desktop
 %{_datadir}/dbus-1/system-services/org.corectrl.helper.service
 %{_datadir}/dbus-1/system-services/org.corectrl.helperkiller.service
