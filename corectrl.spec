@@ -29,6 +29,7 @@ BuildRequires:  cmake(KF5CoreAddons)
 BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  pkgconfig(libdrm)
 BuildRequires:  pkgconfig(botan-2)
+BuildRequires:  pkgconfig(quazip)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  stdc++-static-devel
 BuildRequires:  desktop-file-utils
