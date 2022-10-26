@@ -54,8 +54,7 @@ Recommends:     glxinfo
 Recommends:     mesa-demos
 # For lscpu
 Recommends:     util-linux
-#NOT AVAILABLE IN Cooker yet
-#Recommends:    vulkan-tools
+Recommends:    vulkan-tools
 
 %description
 CoreCtrl is a linux application that allows you to control 
