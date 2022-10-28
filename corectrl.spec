@@ -5,7 +5,7 @@ Summary:        Hardware control tools with nice GUI for Linux
 License:        GPLv3+
 URL:            https://gitlab.com/corectrl/corectrl
 Source0:        https://gitlab.com/corectrl/corectrl/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
-Patch0:		corectrl-v1.0.5-makeinstall.patch
+#Patch0:		corectrl-v1.0.5-makeinstall.patch
 
 #Qt stack
 BuildRequires:  cmake
