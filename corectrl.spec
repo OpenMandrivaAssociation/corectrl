@@ -102,12 +102,12 @@ sed -i -- 's/\/usr/${CMAKE_INSTALL_PREFIX}/g' src/helper/cmake_install.cmake
 %{_libdir}/libcorectrl.so
 %{_prefix}/libexec/corectrl/corectrl_helper
 %{_prefix}/libexec/corectrl/corectrl_helperkiller
-%{_datadir}/applications/org.corectrl.corectrl.desktop
+#{_datadir}/applications/org.corectrl.corectrl.desktop
 %{_datadir}/dbus-1/system-services/org.corectrl.helper.service
 %{_datadir}/dbus-1/system-services/org.corectrl.helperkiller.service
 %{_datadir}/dbus-1/system.d/org.corectrl.helper.conf
 %{_datadir}/dbus-1/system.d/org.corectrl.helperkiller.conf
 %{_datadir}/icons/*/*/apps/corectrl.*
-%{_datadir}/metainfo/org.corectrl.corectrl.appdata.xml
+#{_datadir}/metainfo/org.corectrl.corectrl.appdata.xml
 %{_datadir}/polkit-1/actions/org.corectrl.helper.policy
 %{_datadir}/polkit-1/actions/org.corectrl.helperkiller.policy
