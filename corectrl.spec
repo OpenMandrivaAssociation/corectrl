@@ -1,6 +1,6 @@
 Name:           corectrl
 Version:        1.4.2
-Release:        2
+Release:        3
 Summary:        Hardware control tools with nice GUI for Linux
 License:        GPLv3+
 URL:            https://gitlab.com/corectrl/corectrl
