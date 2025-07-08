@@ -33,7 +33,7 @@ BuildRequires:  pkgconfig(pugixml)
 BuildRequires:  pkgconfig(spdlog)
 BuildRequires:  pkgconfig(libdrm)
 BuildRequires:  pkgconfig(botan-2)
-BuildRequires:  pkgconfig(quazip)
+BuildRequires:  pkgconfig(quazip1-qt6)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  atomic-devel
 BuildRequires:  stdc++-static-devel
