@@ -1,5 +1,5 @@
 Name:           corectrl
-Version:        1.5.1
+Version:        1.5.2
 Release:        1
 Summary:        Hardware control tools with nice GUI for Linux
 License:        GPLv3+
