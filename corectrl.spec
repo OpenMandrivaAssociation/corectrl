@@ -35,7 +35,7 @@ BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  pkgconfig(pugixml)
 BuildRequires:  pkgconfig(spdlog)
 BuildRequires:  pkgconfig(libdrm)
-BuildRequires:  pkgconfig(botan-2)
+BuildRequires:  pkgconfig(botan-3)
 BuildRequires:  pkgconfig(quazip1-qt6)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  atomic-devel
